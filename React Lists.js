@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function car(props){
-    return(
+function Car(props) {
+    return (
         <div>
             <h1>{props.brand} {props.model}</h1>
         </div>
-    )
+    );
 }
 
-function carInfo(){
+function CarInfo() {
     const cardetails = [
         { brand: "Toyota", model: "Camry" },
         { brand: "Honda", model: "Accord" },
@@ -19,9 +19,10 @@ function carInfo(){
     return (
         <div>
             {cardetails.map((each) => {
-                return <car key={each.model} brand={each.brand} model={each.model} />;
+                return <Car key={each.model} brand={each.brand} model={each.model} />;
             })}
         </div>
-        
-    )
+    );
 }
+
+export default CarInfo;
